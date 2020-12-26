@@ -1,0 +1,10 @@
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\bin\Debug\Demo_Tiki.exe.config
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\bin\Debug\Demo_Tiki.exe
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\bin\Debug\Demo_Tiki.pdb
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.csprojAssemblyReference.cache
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.Properties.Resources.resources
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.csproj.GenerateResource.cache
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.csproj.CoreCompileInputs.cache
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.exe
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.pdb
+D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.Login.resources
