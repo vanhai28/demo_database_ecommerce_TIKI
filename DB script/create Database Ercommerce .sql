@@ -355,15 +355,15 @@ ADD CONSTRAINT FK_Reviews_Customer FOREIGN KEY (customerReview) REFERENCES dbo.C
 GO
 
 
--- Add candidate key 
-ALTER TABLE dbo.[Order] 
-ADD CONSTRAINT UQ_Order UNIQUE (order_code,orderCustomer,order_Shipper)
-go
--- ADD FOREIGN KEY  List_Question_Product    --------------------------
+
+-- ADD FOREIGN KEY  ReportShipper    --------------------------
 GO
 ALTER TABLE ReportShipper 
-ADD CONSTRAINT FK_ReportShipper_Order FOREIGN KEY (reOrder,reCustomer,reShipper ) 
-	REFERENCES dbo.[Order] (order_code,orderCustomer,order_Shipper) 
+ADD CONSTRAINT FK_ReportShipper_Order FOREIGN KEY (reOrder) 
+	REFERENCES dbo.[Order] (order_code),
+	CONSTRAINT FK_ReportShipper_Shipper FOREIGN KEY (reShipper) 
+	REFERENCES dbo.Shipper (shipper_ID),
+	CONSTRAINT FK_ReportShipper_Customer FOREIGN KEY (reCustomer) REFERENCES dbo.Customer (cusID)
 GO
 
 -- ADD FOREIGN KEY  Category    --------------------------
