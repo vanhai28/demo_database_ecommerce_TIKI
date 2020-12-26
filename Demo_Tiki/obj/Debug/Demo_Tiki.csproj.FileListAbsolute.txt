@@ -8,3 +8,13 @@ D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.csproj.Core
 D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.exe
 D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.pdb
 D:\HomeWork\hk1 -3\CSDL NC\TH\Tiki_DA2\Demo_Tiki\obj\Debug\Demo_Tiki.Login.resources
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\bin\Debug\Demo_Tiki.exe.config
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\bin\Debug\Demo_Tiki.exe
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\bin\Debug\Demo_Tiki.pdb
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.csprojAssemblyReference.cache
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.Login.resources
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.Properties.Resources.resources
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.csproj.GenerateResource.cache
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.exe
+C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.pdb
