@@ -156,6 +156,7 @@ addressID INT CHECK(addressID>0),
 addressCustomer INT NOT NULL,  
 addressDeliver NVARCHAR(100) NOT NULL,
 addressType NVARCHAR(20),
+isDefaultAddress CHAR(1) CHECK (isDefaultAddress = '0' OR isDefaultAddress = '1'),
 CONSTRAINT PK_AddressDelivery PRIMARY KEY CLUSTERED (addressID)
 )
 
@@ -163,8 +164,6 @@ CREATE TABLE Product_Variant(
 varSKU CHAR(12),
 variantOfProduct INT,
 varPrice INT,
-varOption1 NVARCHAR(50),
-varOption2 NVARCHAR(50),
 varName NVARCHAR(100),
 varDescription NVARCHAR(100),
 varImages VARCHAR(500),
@@ -356,14 +355,16 @@ ADD CONSTRAINT FK_Reviews_Customer FOREIGN KEY (customerReview) REFERENCES dbo.C
 GO
 
 
+-- Add candidate key 
+ALTER TABLE dbo.[Order] 
+ADD CONSTRAINT UQ_Order UNIQUE (order_code,orderCustomer,order_Shipper)
+go
 -- ADD FOREIGN KEY  List_Question_Product    --------------------------
 GO
 ALTER TABLE ReportShipper 
-ADD CONSTRAINT FK_ReportShipper_Shipper FOREIGN KEY (reShipper) REFERENCES dbo.Shipper (shipper_ID) ,
-	CONSTRAINT FK_ReportShipper_Customer FOREIGN KEY (reCustomer) REFERENCES dbo.Customer (cusID),
-	CONSTRAINT FK_ReportShipper_Order FOREIGN KEY (reOrder) REFERENCES dbo.[Order] (order_code)
+ADD CONSTRAINT FK_ReportShipper_Order FOREIGN KEY (reOrder,reCustomer,reShipper ) 
+	REFERENCES dbo.[Order] (order_code,orderCustomer,order_Shipper) 
 GO
-
 
 -- ADD FOREIGN KEY  Category    --------------------------
 GO
@@ -398,5 +399,7 @@ ADD CONSTRAINT FK_CouponForProduct_Product FOREIGN KEY (product_id)
 		REFERENCES dbo.Coupon (couponID)
 
 GO
+
+
 
 
