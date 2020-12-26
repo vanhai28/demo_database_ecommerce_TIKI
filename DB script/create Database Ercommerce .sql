@@ -188,6 +188,13 @@ pro_name_shop NVARCHAR(50) ,
 CONSTRAINT PK_Product PRIMARY KEY (productID)
 )
  
+ CREATE TABLE CouponForProduct 
+ (
+	coupon_code_id INT,
+	product_id INT,
+	CONSTRAINT PK_CouponForProduct PRIMARY KEY CLUSTERED (coupon_code_id, product_id)
+ )
+
 CREATE TABLE CartDetail(
 cart_cusID INT,
 productInCart INT,
@@ -381,4 +388,15 @@ ADD CONSTRAINT FK_Shop_Seller FOREIGN KEY (shopOwner)
 	REFERENCES dbo.Seller (selID)
 
 GO
+
+-- ADD FOREIGN KEY CouponForProduct
+go
+ALTER TABLE dbo.CouponForProduct 
+ADD CONSTRAINT FK_CouponForProduct_Product FOREIGN KEY (product_id) 
+	REFERENCES dbo.Product (productID),
+	CONSTRAINT FK_CouponForProduct_Coupon FOREIGN KEY (coupon_code_id)
+		REFERENCES dbo.Coupon (couponID)
+
+GO
+
 
