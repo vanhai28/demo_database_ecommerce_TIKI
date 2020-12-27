@@ -30,7 +30,23 @@
         {
             this.tabPostPro = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tb_varImage = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tb_varName = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tb_varPrice = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tb_varSKU = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tb_varDescription = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tb_nameProVar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_category = new System.Windows.Forms.ComboBox();
+            this.cb_Brand = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,29 +64,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.cb_Brand = new System.Windows.Forms.ComboBox();
-            this.cb_category = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPostPro.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPostPro
@@ -97,6 +98,148 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.UseWaitCursor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.tb_varImage);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.tb_varName);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.tb_varPrice);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.tb_varSKU);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.tb_varDescription);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.tb_nameProVar);
+            this.groupBox2.Location = new System.Drawing.Point(6, 198);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(756, 169);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thêm biến thể";
+            this.groupBox2.UseWaitCursor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(481, 95);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(204, 30);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Thêm";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseWaitCursor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(398, 68);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 13);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Link ảnh";
+            this.label10.UseWaitCursor = true;
+            // 
+            // tb_varImage
+            // 
+            this.tb_varImage.Location = new System.Drawing.Point(481, 61);
+            this.tb_varImage.Name = "tb_varImage";
+            this.tb_varImage.Size = new System.Drawing.Size(204, 20);
+            this.tb_varImage.TabIndex = 8;
+            this.tb_varImage.UseWaitCursor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(398, 40);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 13);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Tên biến thể";
+            this.label11.UseWaitCursor = true;
+            // 
+            // tb_varName
+            // 
+            this.tb_varName.Location = new System.Drawing.Point(481, 33);
+            this.tb_varName.Name = "tb_varName";
+            this.tb_varName.Size = new System.Drawing.Size(204, 20);
+            this.tb_varName.TabIndex = 6;
+            this.tb_varName.UseWaitCursor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(66, 95);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(23, 13);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Giá";
+            this.label12.UseWaitCursor = true;
+            // 
+            // tb_varPrice
+            // 
+            this.tb_varPrice.Location = new System.Drawing.Point(149, 88);
+            this.tb_varPrice.Name = "tb_varPrice";
+            this.tb_varPrice.Size = new System.Drawing.Size(204, 20);
+            this.tb_varPrice.TabIndex = 4;
+            this.tb_varPrice.UseWaitCursor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(66, 68);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 13);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Mã biến thể";
+            this.label13.UseWaitCursor = true;
+            // 
+            // tb_varSKU
+            // 
+            this.tb_varSKU.Location = new System.Drawing.Point(149, 61);
+            this.tb_varSKU.Name = "tb_varSKU";
+            this.tb_varSKU.Size = new System.Drawing.Size(204, 20);
+            this.tb_varSKU.TabIndex = 2;
+            this.tb_varSKU.UseWaitCursor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(66, 122);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(34, 13);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Mô tả";
+            this.label14.UseWaitCursor = true;
+            // 
+            // tb_varDescription
+            // 
+            this.tb_varDescription.Location = new System.Drawing.Point(149, 115);
+            this.tb_varDescription.Name = "tb_varDescription";
+            this.tb_varDescription.Size = new System.Drawing.Size(204, 20);
+            this.tb_varDescription.TabIndex = 2;
+            this.tb_varDescription.UseWaitCursor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(66, 40);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 13);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Mã Sản phẩm";
+            this.label15.UseWaitCursor = true;
+            // 
+            // tb_nameProVar
+            // 
+            this.tb_nameProVar.Location = new System.Drawing.Point(149, 33);
+            this.tb_nameProVar.Name = "tb_nameProVar";
+            this.tb_nameProVar.Size = new System.Drawing.Size(204, 20);
+            this.tb_nameProVar.TabIndex = 0;
+            this.tb_nameProVar.UseWaitCursor = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cb_category);
@@ -121,6 +264,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng sản phẩm";
             this.groupBox1.UseWaitCursor = true;
+            // 
+            // cb_category
+            // 
+            this.cb_category.FormattingEnabled = true;
+            this.cb_category.Location = new System.Drawing.Point(481, 78);
+            this.cb_category.Name = "cb_category";
+            this.cb_category.Size = new System.Drawing.Size(204, 21);
+            this.cb_category.TabIndex = 13;
+            this.cb_category.UseWaitCursor = true;
+            // 
+            // cb_Brand
+            // 
+            this.cb_Brand.FormattingEnabled = true;
+            this.cb_Brand.Location = new System.Drawing.Point(481, 51);
+            this.cb_Brand.Name = "cb_Brand";
+            this.cb_Brand.Size = new System.Drawing.Size(204, 21);
+            this.cb_Brand.TabIndex = 12;
+            this.cb_Brand.UseWaitCursor = true;
             // 
             // button1
             // 
@@ -246,6 +407,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.dataGridView1);
@@ -275,7 +437,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(6, 211);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(756, 183);
+            this.dataGridView2.Size = new System.Drawing.Size(695, 183);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.UseWaitCursor = true;
             // 
@@ -285,167 +447,20 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(756, 175);
+            this.dataGridView1.Size = new System.Drawing.Size(695, 175);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.UseWaitCursor = true;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // groupBox2
+            // button3
             // 
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.textBox13);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.textBox14);
-            this.groupBox2.Location = new System.Drawing.Point(6, 198);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(756, 169);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thêm biến thể";
-            this.groupBox2.UseWaitCursor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(481, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(204, 30);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.UseWaitCursor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(398, 68);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Link ảnh";
-            this.label10.UseWaitCursor = true;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(481, 61);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(204, 20);
-            this.textBox9.TabIndex = 8;
-            this.textBox9.UseWaitCursor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(398, 40);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 13);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Tên biến thể";
-            this.label11.UseWaitCursor = true;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(481, 33);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(204, 20);
-            this.textBox10.TabIndex = 6;
-            this.textBox10.UseWaitCursor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(66, 95);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 13);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Giá";
-            this.label12.UseWaitCursor = true;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(149, 88);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(204, 20);
-            this.textBox11.TabIndex = 4;
-            this.textBox11.UseWaitCursor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(66, 68);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Mã biến thể";
-            this.label13.UseWaitCursor = true;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(149, 61);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(204, 20);
-            this.textBox12.TabIndex = 2;
-            this.textBox12.UseWaitCursor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(66, 122);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(34, 13);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Mô tả";
-            this.label14.UseWaitCursor = true;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(149, 115);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(204, 20);
-            this.textBox13.TabIndex = 2;
-            this.textBox13.UseWaitCursor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(66, 40);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 13);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Mã Sản phẩm";
-            this.label15.UseWaitCursor = true;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(149, 33);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(204, 20);
-            this.textBox14.TabIndex = 0;
-            this.textBox14.UseWaitCursor = true;
-            // 
-            // cb_Brand
-            // 
-            this.cb_Brand.FormattingEnabled = true;
-            this.cb_Brand.Location = new System.Drawing.Point(481, 51);
-            this.cb_Brand.Name = "cb_Brand";
-            this.cb_Brand.Size = new System.Drawing.Size(204, 21);
-            this.cb_Brand.TabIndex = 12;
-            // 
-            // cb_category
-            // 
-            this.cb_category.FormattingEnabled = true;
-            this.cb_category.Location = new System.Drawing.Point(481, 78);
-            this.cb_category.Name = "cb_category";
-            this.cb_category.Size = new System.Drawing.Size(204, 21);
-            this.cb_category.TabIndex = 13;
+            this.button3.Location = new System.Drawing.Point(707, 36);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(55, 108);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Reset";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Seller
             // 
@@ -458,14 +473,14 @@
             this.Load += new System.EventHandler(this.Seller_Load);
             this.tabPostPro.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -495,18 +510,19 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tb_varImage;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox tb_varName;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox tb_varPrice;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox tb_varSKU;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox tb_varDescription;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox tb_nameProVar;
         private System.Windows.Forms.ComboBox cb_category;
         private System.Windows.Forms.ComboBox cb_Brand;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -94,9 +94,40 @@ namespace Demo_Tiki
             command.Parameters.Add("@proMarketPrice", SqlDbType.Int).Value = Convert.ToInt32(tb_price.Text);
             command.Parameters.Add("@proDescription", SqlDbType.VarChar).Value = Convert.ToString(tb_description.Text);
             command.Parameters.Add("@proImageCover", SqlDbType.VarChar).Value = Convert.ToString(tb_image.Text);
-            command.Parameters.Add("@proBrand", SqlDbType.VarChar).Value = Convert.ToString(tb_TenSanPham.Text);
-            command.Parameters.Add("@proCategory", SqlDbType.VarChar).Value = Convert.ToString(tb_TenSanPham.Text);
+            command.Parameters.Add("@proBrand", SqlDbType.VarChar).Value = Convert.ToString(cb_Brand.Text);
+            command.Parameters.Add("@proCategory", SqlDbType.VarChar).Value = Convert.ToString(cb_category.Text);
             command.Parameters.Add("@user", SqlDbType.Int).Value = user;
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            DataTable data = new DataTable();
+
+            data = new DataTable();
+            command = new SqlCommand("getProductOfShop", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@userID", SqlDbType.Int).Value = user;
+            adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+            dataGridView1.DataSource = data;
+            connection.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            command = new SqlCommand("PostVariant", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@variantOfProduct", SqlDbType.Int).Value = Convert.ToInt32(tb_nameProVar.Text);
+            command.Parameters.Add("@varSKU", SqlDbType.VarChar).Value = Convert.ToString(tb_varSKU.Text);
+            command.Parameters.Add("@varPrice", SqlDbType.Int).Value = Convert.ToInt32(tb_varPrice.Text);
+            command.Parameters.Add("@varDescription", SqlDbType.VarChar).Value = Convert.ToString(tb_varDescription.Text);
+            command.Parameters.Add("@varName", SqlDbType.VarChar).Value = Convert.ToString(tb_varName.Text);
+            command.Parameters.Add("@varImages", SqlDbType.VarChar).Value = Convert.ToString(tb_varImage.Text);
+           
             connection.Open();
             command.ExecuteNonQuery();
             connection.Close();
