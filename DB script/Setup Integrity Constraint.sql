@@ -71,6 +71,22 @@ BEGIN
 END
 GO
 
+-- Khách hàng không được phép xoá địa chỉ giao hàng mặc định
+CREATE TRIGGER trig_checkRemoveAddressDelivery ON dbo.AddressDelivery
+FOR DELETE
+AS
+BEGIN
+    IF EXISTS (SELECT * FROM Deleted d WHERE d.addressType = '1')
+	BEGIN
+	    RAISERROR('Customer is not alowed remove default address delivery ',16,1);
+		ROLLBACK;
+		RETURN;
+	END
+END
+
+
+
+-- Tên shop và proShop phải tương ứng với shopName và ID của shop trong bảng shop
 CREATE TRIGGER trig_nameShopInProductTable ON dbo.Product
 FOR INSERT , UPDATE
 AS
