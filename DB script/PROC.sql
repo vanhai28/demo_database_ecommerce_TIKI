@@ -48,7 +48,7 @@ END
 --EXEC ViewBestsellersInMonth @month = '2019-12-01'
 
 GO
-
+SELECT * FROM dbo.Customer
 --xem doanh thu tung thang
 CREATE PROC ViewProceedsInMonth
 AS
