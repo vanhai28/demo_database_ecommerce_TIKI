@@ -2,6 +2,18 @@ use Ecommerce
 
 GO
 
+--xem tinh trang don hang
+CREATE PROC GetOrderStatus
+@order_ID CHAR(12)
+AS
+BEGIN
+	SELECT orderStatus
+	FROM dbo.[Order]
+	WHERE order_code LIKE @order_ID
+END
+
+GO
+
 --cap nhat tinh trang don hang
 CREATE PROC UpdateOrderStatus
 @order_ID CHAR(12),
@@ -10,7 +22,7 @@ AS
 BEGIN
 	UPDATE dbo.[Order]
 	SET orderStatus = @order_Status
-	WHERE order_code = @order_ID
+	WHERE order_code LIKE @order_ID
 END
 
 GO
