@@ -1,4 +1,4 @@
-﻿SELECT * FROM dbo.Product
+SELECT * FROM dbo.Product
 WHERE proName like 'Điện thoại Ciptin'
 EXEC SearchProduct 'Xe đạp', 'Cao su Đà Nẵng', 56
 --TIM KIEM MAT HANG
@@ -26,7 +26,9 @@ BEGIN
 
 END
 
+
 --exec SearchProduct 'Xe máy','','Xe máy'
+
 
 -----------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------
@@ -34,34 +36,60 @@ END
 GO
 CREATE PROC PostProduct 
 (
-	@productID INT,
 	@proName NVARCHAR(50),
 	@proOrigin NVARCHAR(30),
 	@proMarketPrice INT,
 	@proDescription NVARCHAR(500),
-	@proIsDeleted CHAR(1),
 	@proImageCover VARCHAR(100),
-	@proListImage VARCHAR(500), 
 	@proBrand NVARCHAR(30),
-	@proCategory INT,
-	@proShop INT,
-	@pro_name_shop NVARCHAR(50)
+	@proCategory VARCHAR(50),
+	@user INT
 )
 AS
 BEGIN
-	INSERT INTO Product values (	@productID,
+
+	DECLARE @sellerId INT
+	SET @sellerId = (SELECT userProfile
+					FROM dbo.[User]
+					WHERE userID = @user)
+	
+	DECLARE @proShop INT
+	SET @proShop = (SELECT shopID
+					FROM dbo.Seller JOIN dbo.Shop
+					ON selID =shopOwner
+					WHERE selID = @sellerId)
+	
+	DECLARE @pro_name_shop VARCHAR(50)
+	SET @pro_name_shop = (SELECT shopNameShop
+					FROM dbo.Shop
+					WHERE shopID = @proShop)
+
+	DECLARE @categoryID INT
+	SET @categoryID = (SELECT catID
+					FROM dbo.Category
+					WHERE catName = @proCategory)
+	INSERT INTO Product values (
 									@proName,
 									@proOrigin,
 									@proMarketPrice,
 									@proDescription,
-									@proIsDeleted,
+									0,
 									@proImageCover,
-									@proListImage, 
+									'', 
 									@proBrand,
-									@proCategory,
+									@categoryID,
 									@proShop,
 									@pro_name_shop)
 END
+
+EXEC dbo.PostProduct @proName = N'sss',        -- nvarchar(50)
+                     @proOrigin = N'ssss',      -- nvarchar(30)
+                     @proMarketPrice = 0,   -- int
+                     @proDescription = N'ssss', -- nvarchar(500)
+                     @proImageCover = 'ssss',   -- varchar(100)
+                     @proBrand = N'Viettel',       -- nvarchar(30)
+                     @proCategory = '',     -- varchar(50)
+                     @user = 2              -- int
 
 
 -----------------------------------------------------------------------------------------------------
@@ -116,6 +144,68 @@ BEGIN
 	WHERE CartDetail.cart_cusID = @cusID
 END
 
+
+--DECLARE @total INT;
+--EXEC dbo.calcCostInCart @cusID = 2,            -- int
+--                        @total = @total OUTPUT -- int
+
+
+--------------------------------------------------------------------------------
+
+--Lay danh sach sản phẩm của shop
+GO
+CREATE PROC getProductOfShop 
+(
+	@userID INT
+)
+AS
+BEGIN
+	SELECT productID, proName, proMarketPrice, proIsDeleted
+	FROM Seller JOIN Shop
+					ON Seller.selID = Shop.shopOwner
+					JOIN Product ON Shop.shopID = Product.proShop
+	WHERE Seller.selID = @userID
+END
+
+--EXEC dbo.getProductOfShop @userID = 2 -- int
+
+INSERT INTO dbo.Shop
+(	shopID,
+    shopNameShop,
+    shopLogo,
+    shopRegistrationStatus,
+    shopBussinessLine,
+    shopOwner
+)
+VALUES
+(  
+	100000,
+    N'Ngdzdep', -- shopNameShop - nvarchar(50)
+    '',  -- shopLogo - varchar(100)
+    '',  -- shopRegistrationStatus - char(15)
+    N'', -- shopBussinessLine - nvarchar(30)
+    2    -- shopOwner - int
+    )
+
+--------------------------------------------------------------------------------
+--Lay valirant
+CREATE PROC getVariant 
+(
+	@product INT
+)
+AS
+BEGIN
+	SELECT varSKU,variantOfProduct
+      ,varPrice
+      ,[varName]
+      ,[varDescription]
+      ,[variant_isDelete]
+	FROM Product_Variant
+	WHERE Product_Variant.variantOfProduct = @product
+END
+
+EXEC dbo.getVariant @product = 413 -- int
+=======
 GO
 
 CREATE PROC calcTotalPriceProductDiscount
@@ -192,3 +282,4 @@ BEGIN
 	RETURN ISNULL(@sum, 0)
 END
 go
+

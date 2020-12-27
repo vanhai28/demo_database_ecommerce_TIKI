@@ -25,6 +25,21 @@ BEGIN
 	WHERE order_code LIKE @order_ID
 END
 
+EXEC dbo.UpdateOrderStatus @order_ID = '002KOU',    -- char(12)
+                           @order_Status = 'Queueing ' -- varchar(30)
+
+--Thêm xem status
+GO 
+CREATE PROC GetOrderStatus
+@order_ID CHAR(12)
+AS
+BEGIN
+	SELECT order_code, orderStatus
+	FROM dbo.[Order]
+	WHERE order_code = @order_ID
+END
+
+
 GO
 
 --Xoa san pham trong gio hang
