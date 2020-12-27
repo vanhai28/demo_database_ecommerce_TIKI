@@ -69,4 +69,18 @@ BEGIN
 		RETURN;
 	END
 END
-go
+GO
+
+CREATE TRIGGER trig_nameShopInProductTable ON dbo.Product
+FOR INSERT , UPDATE
+AS
+BEGIN
+    IF NOT EXISTS(SELECT * FROM Inserted i JOIN dbo.Shop on i.proShop = shop.shopID
+	AND i.pro_name_shop = shop.shopName)
+	BEGIN
+	    RAISERROR('name shop and shop ID is not match ',16,1);
+		ROLLBACK;
+		RETURN;
+	END
+END
+
