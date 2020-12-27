@@ -14,7 +14,7 @@ namespace Demo_Tiki
     public partial class Login : Form
     {
         //ket noi den database
-        SqlConnection connection = new SqlConnection("Data Source=ZDEP;Initial Catalog=EcommerceWebsite;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=.\\SQLEXPRESS01;Initial Catalog=EcommerceWebsite;Integrated Security=True");
         string str = "";
         SqlDataAdapter adapter;
         SqlCommand command;
@@ -42,7 +42,7 @@ namespace Demo_Tiki
 
                 if (result == "C")
                 {
-                    Form1 cus = new Form1();
+                    Form1 cus = new Form1(userId);
                     this.Hide();
                     cus.ShowDialog();
                     this.Show();
