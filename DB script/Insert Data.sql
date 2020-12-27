@@ -1,4 +1,8 @@
 ﻿
+-- 
+--   Nhóm CSDLNC_2020_06
+--
+
 ------ Insert bổ sung dữ liệu 
 
 INSERT INTO dbo.Payment
