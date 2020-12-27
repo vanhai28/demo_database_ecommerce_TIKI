@@ -103,7 +103,7 @@ CONSTRAINT PK_Seller PRIMARY KEY CLUSTERED (selID)
 
 CREATE TABLE Shop (
 shopID INT CHECK(shopID>0), 
-shopNameShop NVARCHAR(65) UNIQUE NOT NULL, 
+shopName NVARCHAR(65) UNIQUE NOT NULL, 
 shopLogo VARCHAR(100),
 shopRegistrationStatus CHAR(15) NOT NULL,
 shopBussinessLine NVARCHAR(60) NOT NULL,
@@ -183,9 +183,9 @@ proIsDeleted CHAR(1) CHECK(proIsDeleted = '0' OR proIsDeleted = '1'),
 proImageCover VARCHAR(100),
 proListImage VARCHAR(500), 
 proBrand NVARCHAR(30) NOT null,
-proCategory INT,
-proShop INT,
-pro_name_shop NVARCHAR(65) ,
+proCategory INT NOT NULL,
+proShop INT NOT NULL,
+pro_name_shop NVARCHAR(65) NOT NULL ,
 CONSTRAINT PK_Product PRIMARY KEY (productID)
 )
  
@@ -338,7 +338,7 @@ ALTER TABLE Product
 ADD CONSTRAINT FK_Product_Brand FOREIGN KEY (proBrand) REFERENCES dbo.Brand (brandName) ,
 	CONSTRAINT FK_Product_Category FOREIGN KEY (proCategory) REFERENCES dbo.Category (catID) ,
 	CONSTRAINT FK_Product_Shop FOREIGN KEY (proShop) REFERENCES dbo.Shop (shopID),
-	CONSTRAINT FK_Product_Shop_name FOREIGN KEY (pro_name_shop) REFERENCES dbo.Shop (shopNameShop)
+	CONSTRAINT FK_Product_Shop_name FOREIGN KEY (pro_name_shop) REFERENCES dbo.Shop (shopName)
 GO
  
 
