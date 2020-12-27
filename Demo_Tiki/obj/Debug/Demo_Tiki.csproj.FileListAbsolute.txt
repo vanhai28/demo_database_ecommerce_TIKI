@@ -18,3 +18,13 @@ C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecomm
 C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.csproj.CoreCompileInputs.cache
 C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.exe
 C:\Users\admin\Documents\Môn học năm 3\CSDL nc\Project 2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.pdb
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.csprojAssemblyReference.cache
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.Form1.resources
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.Login.resources
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.Properties.Resources.resources
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.csproj.GenerateResource.cache
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.exe
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\obj\Debug\Demo_Tiki.pdb
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\bin\Debug\Demo_Tiki.exe.config
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\bin\Debug\Demo_Tiki.exe
+E:\Năm 3\Ki 1\CSDL-NC\DA2\demo_database_ecommerce_TIKI\Demo_Tiki\bin\Debug\Demo_Tiki.pdb
