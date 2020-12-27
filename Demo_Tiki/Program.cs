@@ -14,9 +14,10 @@ namespace Demo_Tiki
         [STAThread]
         static void Main()
         {
+            int userId;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Login());
         }
     }
 }
